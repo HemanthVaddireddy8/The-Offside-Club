@@ -1,0 +1,69 @@
+﻿.bodyClass {
+    background-image:url(../Images/1.jpg);
+    background: no-repeat center center fixed;
+    background-size:cover;
+    background-attachment:fixed;
+}
+.tblMain {
+            
+            background-size: cover;
+        }
+
+html {
+    height: 100%;
+}
+
+#divMyProfile {
+            margin: auto;
+            position: relative;
+            z-index: 9999;
+        }
+
+            #divMyProfile ul {
+                list-style: none;
+                padding: 0px;
+                text-decoration: none;
+                text-decoration-line: none;
+                color: #ff0000;
+                border: none;
+                z-index: 9999;
+            }
+
+                #divMyProfile ul li {
+                    float: left;
+                    background-color: #fff;
+                    border: solid 1px white;
+                    width: 100px;
+                    height: 45px;
+                    text-align: center;
+                    color: #ff0000;
+                    display: block;
+                    margin: 1px;
+                    border-radius: 10px;
+                    z-index: 9999;
+                }
+
+                    #divMyProfile ul li a {
+                        text-decoration: none;
+                        font-family: Calibri;
+                        background-color: #262F3E; /*#262F3E;*/
+                        display: block;
+                        padding: 12px;
+                        border-radius: 10px;
+                        color: white;
+                        z-index: 9999;
+                    }
+
+                        #divMyProfile ul li a:hover {
+                            background-color: #abb99b;
+                            color: #ff0000;
+                        }
+
+                    #divMyProfile ul li ul {
+                        display: none;
+                    }
+
+                    #divMyProfile ul li:hover ul {
+                        display: inline-block;
+                        border-radius: 10px;
+                    }

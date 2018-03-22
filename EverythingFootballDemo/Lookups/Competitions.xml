@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Competitions>
+  <Competition Text="Premier League" value="2"></Competition>
+  <Competition Text="La Liga" value="2"></Competition>
+  <Competition Text="Bundesliga" value="2"></Competition>
+  <Competition Text="Serie A" value="2"></Competition>
+  <Competition Text="Ligue 1" value="2"></Competition>
+  <Competition Text="Chanpions League" value="2"></Competition>
+</Competitions>

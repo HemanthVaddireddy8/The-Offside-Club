@@ -1,0 +1,260 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="EverythingFootballDemo.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link href="scripts/Styles.css" rel="stylesheet" />
+    <style type="text/css">
+        #form1 {
+        font-family: 'Times New Roman', Times, serif
+        }
+        #btnLogin {
+            border-radius: 15px;
+        }
+
+        #divMenu {
+            width: 900px;
+            margin: auto;
+            position: relative;
+            z-index: 9999;
+        }
+
+            #divMenu ul {
+                list-style: none;
+                padding: 0px;
+                text-decoration: none;
+                text-decoration-line: none;
+                color: #ff0000;
+                border: none;
+                z-index: 9999;
+            }
+
+                #divMenu ul li {
+                    float: left;
+                    background-color: #fff;
+                    border: solid 1px white;
+                    width: 150px;
+                    height: 45px;
+                    text-align: center;
+                    color: #ff0000;
+                    display: block;
+                    margin: 1px;
+                    border-radius: 10px;
+                    z-index: 9999;
+                }
+
+                    #divMenu ul li a {
+                        text-decoration: none;
+                        font-family: Calibri;
+                        background-color: #262F3E; /*#262F3E;*/
+                        display: block;
+                        padding: 12px;
+                        border-radius: 10px;
+                        color: white;
+                        z-index: 9999;
+                    }
+
+                        #divMenu ul li a:hover {
+                            background-color: #abb99b;
+                            color: #ff0000;
+                        }
+
+                    #divMenu ul li ul {
+                        display: none;
+                    }
+
+                    #divMenu ul li:hover ul {
+                        display: inline-block;
+                        border-radius: 10px;
+                    }
+
+        #form1 {
+            background-color: #262F3E;
+        }
+
+        #divMyProfile {
+            margin: auto;
+            position: relative;
+            z-index: 9999;
+        }
+
+            #divMyProfile ul {
+                list-style: none;
+                padding: 0px;
+                text-decoration: none;
+                text-decoration-line: none;
+                color: #ff0000;
+                border: none;
+                z-index: 9999;
+            }
+
+                #divMyProfile ul li {
+                    float: left;
+                    background-color: #fff;
+                    border: solid 1px white;
+                    width: 100px;
+                    height: 45px;
+                    text-align: center;
+                    color: #ff0000;
+                    display: block;
+                    margin: 1px;
+                    border-radius: 10px;
+                    z-index: 9999;
+                }
+
+                    #divMyProfile ul li a {
+                        text-decoration: none;
+                        font-family: Calibri;
+                        background-color: #262F3E; /*#262F3E;*/
+                        display: block;
+                        padding: 12px;
+                        border-radius: 10px;
+                        color: white;
+                        z-index: 9999;
+                    }
+
+                        #divMyProfile ul li a:hover {
+                            background-color: #abb99b;
+                            color: #ff0000;
+                        }
+
+                    #divMyProfile ul li ul {
+                        display: none;
+                    }
+
+                    #divMyProfile ul li:hover ul {
+                        display: inline-block;
+                        border-radius: 10px;
+                    }
+    </style>
+    <title>Everything Football</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="divMain" runat="server">
+            <asp:Panel ID="pnlMain" runat="server" Width="100%" ScrollBars="Auto">
+                <asp:Table ID="tblMain" runat="server" BackImageUrl="~/Images/dark-gray.jpg">
+                    <asp:TableHeaderRow ID="tHead" Width="100%" Height="75px">
+                        <asp:TableHeaderCell VerticalAlign="Bottom" Width="150px">
+                            <asp:ImageButton ID="imgbtnHome" runat="server" Width="150px" Height="100px" ImageUrl="~/Images/imageedit_1_8176414832.png" PostBackUrl="~/HomePage.aspx" />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </asp:TableHeaderCell>
+                        <asp:TableHeaderCell VerticalAlign="Top">
+                            <div id="divMenu" runat="server">
+                                <ul id="ulHomePageMenu" runat="server">
+                                    <li><a href="HomePage.aspx">Latest News</a></li>
+                                    <li><a href="/HomeSite/Competitions.aspx">Competitions</a>
+                                        <ul>
+                                            <li><a href="CompetitionsInfo.aspx?competitionName=PL">Premier League</a></li>
+                                            <li><a href="CompetitionsInfo.aspx?competitionName=SL">LaLiga</a></li>
+                                            <li><a href="CompetitionsInfo.aspx?competitionName=BL">Bundesliga</a></li>
+                                            <li><a href="CompetitionsInfo.aspx?competitionName=IL">Serie A</a></li>
+                                            <li><a href="CompetitionsInfo.aspx?competitionName=FL">Ligue 1</a></li>
+                                            <li><a href="CompetitionsInfo.aspx?competitionName=CL">Champions League</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="Fixtures.aspx">Fixtures</a></li>
+                                    <li><a href="Results.aspx">Results</a></li>
+                                    <li><a href="Teams.aspx">Teams</a></li>
+                                </ul>
+                            </div>
+                            <marquee><strong><asp:Label ID="lblMsg" runat="server" Text="**Register on The OffSide Club and grab your matchday tickets at CHEAPEST RATES**" Font-Bold="true" ForeColor="Red"></asp:Label></strong></marquee>
+                        </asp:TableHeaderCell>
+                        <asp:TableHeaderCell VerticalAlign="Top">
+
+                            <div id="divMyProfile" runat="server">
+                                <ul id="ulMyProfile" runat="server">
+                                    <li><a href="MyProfile.aspx">My Profile</a>
+                                        <ul>
+                                            <li><a href="MyProfile.aspx">Edit Profile</a></li>
+                                            <li><a href="Fixtures.aspx">Book Tickets</a></li>
+                                            <li><a href="LogOut.aspx">Sign Out</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <br />
+                            <asp:Button ID="btnLogin" runat="server" Width="100px" PostBackUrl="~/Login.aspx" Font-Bold="true" Height="45px" ForeColor="White" Text="Sign In" BackColor="#262f3e" />
+                        </asp:TableHeaderCell>
+                    </asp:TableHeaderRow>
+                    <asp:TableRow>
+                        <asp:TableCell VerticalAlign="Top" Width="250px">
+                            <div id="divMerchandise" runat="server">
+                                <h5><span style="color: Red;"><strong>Shop your favourite club's merchandise at lowest rates.<br />
+                                    Now available at The Offside Club.</strong></span></h5>
+                                <marquee> 
+                                <strong aria-orientation="vertical"> 
+                                    <asp:Panel ID="pnlAds" runat="server">
+                                <asp:Image ID="imgMerchOne" runat="server" ImageUrl="~/Images/Liverpool-17-18-Home-Long-Sleeve-Soccer-Jersey-Shirt.png" Width="250px" Height="150px" />
+                                <br /><br />
+                                <img src="Images/imageedit_1_2819023828.png" width="250" height="150"/>
+                                        <br /> <br />
+<img src="Images/imageedit_1_4706353746.png" width="250" height="150" />
+                                        <br /> <br />
+<img src="Images/imageedit_1_4902249325.png" width="250" height="150" />
+                                        <br /> <br />
+<img src="Images/imageedit_1_7751200567.png" width="250" height="150"/>
+                                        <br /> <br />
+<img src="Images/imageedit_1_8179487042.png" width="250" height="150"/>
+                                        <br /> <br />
+<img src="Images/imageedit_1_8590484254.png" width="250" height="150"/>
+                                        <br /> <br />
+<img src="Images/imageedit_1_8759703021.png" width="250" height="150"/>
+                                        <br /> <br />
+<img src="Images/imageedit_1_9611946113.png" width="250" height="150"/>
+                                        <br /> <br />
+                            </asp:Panel>
+                                    </strong>
+                                </marquee>
+                            </div>
+                        </asp:TableCell>
+                        <asp:TableCell Width="1000px" VerticalAlign="Top">
+                            <asp:ContentPlaceHolder ID="MainContentPlaceHolder" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </asp:TableCell>
+                        <asp:TableCell></asp:TableCell>
+                    </asp:TableRow>
+                    <asp:TableFooterRow Width="100%" Height="150px">
+                        <asp:TableCell></asp:TableCell>
+                        <asp:TableCell>
+                            <asp:Table runat="server" ForeColor="White">
+                                <asp:TableHeaderRow>
+                                    <asp:TableHeaderCell ColumnSpan="3" HorizontalAlign="Center">
+                                        <hr />
+                                        <h1><span style="font-size:28px">T</span><span style="font-size:24px">HE</span> <span style="font-size:28px">O</span><span style="font-size:24px">FFSIDE</span > <span style="font-size:28px">C</span><span style="font-size:24px">LUB</span></h1>
+                                        <hr />
+                                    </asp:TableHeaderCell>
+                                </asp:TableHeaderRow>
+                                <asp:TableRow>
+                                    <asp:TableCell>
+                                        <h2><span>About</span></h2>
+                                        <p><span style="color:indianred">An independent Football website focused on providing the users <br />a single destinations to view all the latest football news, live scores 
+                                            and <br />an ability for the registered users to book matches and travel to their favourite grounds 
+                                            <br />across the globe.</span></p>
+                                    </asp:TableCell>
+                                    <asp:TableCell HorizontalAlign="Center">
+                                        <h2>Terms & Conditions&nbsp;&nbsp;&nbsp;</h2>
+                                        <h4><span style="color:indianred">Terms Of Service</span></h4>
+                                        <h4><span style="color:indianred">Privacy Policy</span></h4>
+                                        <h4><span style="color:indianred">Fantasy Football</span></h4>
+                                    </asp:TableCell>
+                                    <asp:TableCell HorizontalAlign="Center">
+                                        <h2>Contact Us</h2>
+                                        <h4><span style="color:indianred">Customer Care</span></h4>
+                                        <h4><span style="color:indianred">Ticket Booking</span></h4>
+                                        <h4><span style="color:indianred">Advertisements</span></h4>
+                                    </asp:TableCell>
+                                </asp:TableRow>
+                            </asp:Table>
+                        </asp:TableCell>
+                    </asp:TableFooterRow>
+                </asp:Table>
+
+            </asp:Panel>
+        </div>
+    </form>
+</body>
+</html>
